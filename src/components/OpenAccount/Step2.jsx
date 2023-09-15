@@ -1,3 +1,4 @@
+import { ArrowBackSharp } from "@mui/icons-material";
 import React from "react";
 
 const Step2 = ({ setFormData, setSteps, formData }) => {
@@ -7,18 +8,20 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
     setSteps(3);
   };
   return (
-    <div>
+    <div className="my-8">
       <div
-        className="rounded-full w-fit bg-blue-400 px-3 py-4"
+        className="rounded-full w-fit bg-blue-400 px-4 py-4"
         onClick={() => setSteps((...prev) => prev - 1)}
       >
-        back
+        <ArrowBackSharp />
       </div>
-      <form className="flex flex-col w-full" onSubmit={handlesubmit}>
+
+      <form className="flex flex-col w-full text-lg" onSubmit={handlesubmit}>
         <div className="px-4 py-6 flex items-center justify-center gap-4 ">
           <p className="font-semibold">Full Name</p>
 
           <input
+            required
             name="fullname"
             type="text"
             id="fullname"
@@ -38,6 +41,7 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
           <p className="font-semibold">Email Id</p>
 
           <input
+            required
             name="emailId"
             type="email"
             id="emailId"
@@ -57,6 +61,7 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
           <p className="font-semibold">Your Image</p>
 
           <input
+            required
             className=" outline-none rounded-lg px-4 py-2"
             type="file"
             value={image}
@@ -75,6 +80,7 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
           <p className="font-semibold ">Address</p>
 
           <input
+            required
             name="address"
             id="address"
             value={address}
@@ -88,7 +94,7 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
             className=" outline-none rounded-lg w-full px-4 py-2 border border-black shadow-slate-600  "
           ></input>
         </div>
-        <button className="bg-blue-400 px-4 py-2 rounded-lg">Next</button>
+        <button className="bg-blue-400 px-4 py-2 rounded-lg my-4">Next</button>
       </form>
     </div>
   );

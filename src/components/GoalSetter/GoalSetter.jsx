@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FinancialCardWrapper from "../FinancialManagement/FinancialCardWrapper";
+import { CancelOutlined } from "@mui/icons-material";
 
 const GoalSetter = () => {
   const [goalData, setGoalData] = useState({
@@ -64,11 +65,11 @@ const GoalSetter = () => {
   console.log(description, duration, goalAmount, investableAmount);
 
   return (
-    <div>
-      <div>GoalSetter</div>
+    <div className="mx-4">
+      <div className="text-3xl my-4 font-semibold">GoalSetter</div>
       <div>
         <form
-          className="flex flex-col gap-4 justify-center my-4"
+          className="flex flex-col gap-4 justify-center my-4 text-[1rem]"
           onSubmit={handlePlanGoal}
         >
           <div className="flex gap-4 items-center justify-between">
@@ -136,7 +137,7 @@ const GoalSetter = () => {
             />
           </div>
           <div>
-            <button className="w-full py-2 text-xs bg-blue-400 rounded-lg mx-auto my-4">
+            <button className="w-full py-2 bg-blue-400 rounded-lg mx-auto my-4">
               Plan your Goal
             </button>
           </div>
@@ -144,16 +145,15 @@ const GoalSetter = () => {
       </div>
       {showSuggestion && (
         <div
-          className="rounded-full w-fit bg-blue-400 py-3 px-4 my-4"
+          className="rounded-full w-fit bg-blue-400 py-3 px-3 my-4"
           onClick={() => setSuggestions(false)}
         >
-          X
+          <CancelOutlined />
         </div>
       )}
       {showSuggestion && (
-        <div className="flex flex-wrap items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4 my-8">
           {filteredSuggestion.map((investment) => {
-            console.log(investment);
             return (
               <FinancialCardWrapper
                 title={investment.title + " investment for " + description}

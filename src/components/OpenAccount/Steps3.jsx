@@ -1,3 +1,4 @@
+import { ArrowBackSharp } from "@mui/icons-material";
 import React from "react";
 
 const Steps3 = ({
@@ -7,7 +8,7 @@ const Steps3 = ({
   otp,
   showInput,
   setFormData,
-  phone,
+  phonenum,
   setSteps,
 }) => {
   const handleInput = (e) => {
@@ -58,20 +59,23 @@ const Steps3 = ({
   return (
     <div>
       <div
-        className="rounded-full w-fit bg-blue-400 px-3 py-4"
+        className="rounded-full w-fit bg-blue-400 p-4"
         onClick={() => setSteps((...prev) => prev - 1)}
       >
-        back
+        <ArrowBackSharp />
       </div>
-      <div>eKYC</div>
-      <div className="flex flex-col items-start gap-2 my-4">
+      <div className="mx-auto my-4 text-xl font-semibold">eKYC</div>
+      <div className="flex flex-col items-start gap-2 my-4 text-lg">
         <div>Enter your phone number :</div>
         <div>
           <input
-            name="phone"
+            required
+            name="phonenum"
             type="tel"
             id="phone"
-            value={phone}
+            minLength={10}
+            maxLength={10}
+            value={phonenum}
             onChange={(e) =>
               setFormData((prev) => ({
                 ...prev,
@@ -84,9 +88,11 @@ const Steps3 = ({
         </div>
 
         {showInput && (
-          <div className="flex items-center justify-center">
-            <div id="inputs" className="inputs">
+          <div className="flex items-center justify-center my-4 gap-2">
+            <div>Enter your OTP :</div>
+            <div id="inputs" className="inputs ml-4">
               <input
+                required
                 className="input"
                 type="text"
                 inputMode="numeric"
@@ -96,6 +102,7 @@ const Steps3 = ({
                 onKeyUp={handleKeyUp}
               />
               <input
+                required
                 className="input"
                 type="text"
                 name="b"
@@ -105,6 +112,7 @@ const Steps3 = ({
                 onKeyUp={handleKeyUp}
               />
               <input
+                required
                 className="input"
                 type="text"
                 name="c"
@@ -114,6 +122,7 @@ const Steps3 = ({
                 onKeyUp={handleKeyUp}
               />
               <input
+                required
                 className="input"
                 type="text"
                 name="d"

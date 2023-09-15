@@ -9,21 +9,26 @@ import Protect from "./components/Protect";
 import PageNotFound from "./pages/PageNotFound";
 import InterMediatoryAuth from "./pages/InterMediatory";
 import UpdatePassword from "./pages/UpdatePassword";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Partners from "./components/Partners";
 
 function App() {
   return (
     <>
+      <Header />
       <Router>
         <div className="container">
           <Routes>
             <Route
               path="/"
               element={
-                <Protect>
+                <div>
                   <Home />
-                </Protect>
+                </div>
               }
             />
+
             <Route path="/open-account" element={<h1>Open Acccount</h1>} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -33,6 +38,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Footer />
       <ToastContainer />
     </>
   );

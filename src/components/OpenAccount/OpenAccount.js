@@ -49,6 +49,7 @@ const OpenAccount = () => {
           showInput={showInput}
           phone={formData.phone}
           setSteps={setSteps}
+          setFormData={setFormData}
         />
       )}
     </div>

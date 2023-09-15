@@ -42,7 +42,7 @@ h3 {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  /* padding: 0 20px; */
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -267,4 +267,28 @@ h3 {
 }
 .forgot-password:hover {
   color: #777;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="file"] + label,
+input[type="radio"]:checked + label,
+.input {
+  width: 20px;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  font-size: 20px;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.input:focus {
+  border-bottom: 3px solid orange;
+  outline: none;
+}
+
+.input:nth-child(1) {
+  cursor: pointer;
+  pointer-events: all;
 }

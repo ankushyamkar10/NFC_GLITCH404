@@ -9,27 +9,20 @@ import Protect from "./components/Protect";
 import PageNotFound from "./pages/PageNotFound";
 import InterMediatoryAuth from "./pages/InterMediatory";
 import UpdatePassword from "./pages/UpdatePassword";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Partners from "./components/Partners";
+import OpenAccount from "./components/OpenAccount/OpenAccount";
+import FinancialManagment from "./components/FinancialManagement/FinancialManagment";
+import GoalSetter from "./components/GoalSetter/GoalSetter";
 
 function App() {
   return (
     <>
-      <Header />
       <Router>
         <div className="container">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  <Home />
-                </div>
-              }
-            />
-
-            <Route path="/open-account" element={<h1>Open Acccount</h1>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/open-account" element={<OpenAccount />} />
+            <Route path="/management" element={<FinancialManagment />} />
+            <Route path="/goalsetter" element={<GoalSetter />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/updatePassword" element={<UpdatePassword />} />
@@ -38,7 +31,6 @@ function App() {
           </Routes>
         </div>
       </Router>
-      <Footer />
       <ToastContainer />
     </>
   );

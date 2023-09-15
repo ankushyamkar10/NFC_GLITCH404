@@ -1,5 +1,6 @@
 import { ArrowBackSharp } from "@mui/icons-material";
 import React from "react";
+import { setCookie } from "../../utils/cookies";
 
 const Steps3 = ({
   setOTP,
@@ -10,6 +11,7 @@ const Steps3 = ({
   setFormData,
   phonenum,
   setSteps,
+  formData,
 }) => {
   const handleInput = (e) => {
     const target = e.target;
@@ -53,6 +55,7 @@ const Steps3 = ({
   const handleSubmitOTP = (e) => {
     e.preventDefault();
     alert("Account Opened");
+    setCookie("acc_info", formData);
     window.location.href = "/";
   };
 

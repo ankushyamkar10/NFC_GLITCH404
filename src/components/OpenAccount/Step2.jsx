@@ -64,13 +64,12 @@ const Step2 = ({ setFormData, setSteps, formData }) => {
             required
             className=" outline-none rounded-lg px-4 py-2"
             type="file"
-            value={image}
             name="image"
             id="image"
             onChange={(e) =>
               setFormData((prev) => ({
                 ...prev,
-                [e.target.name]: e.target.value,
+                [e.target.name]: e.target.files[0],
               }))
             }
           />

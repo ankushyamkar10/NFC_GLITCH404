@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Step1 from "./Step1";
 import Steps3 from "./Steps3";
 import Step2 from "./Step2";
+import { getCookie } from "../../utils/cookies";
+import { toast } from "react-toastify";
 
 const OpenAccount = () => {
   const [steps, setSteps] = useState(1);
@@ -19,9 +21,16 @@ const OpenAccount = () => {
     fullname: "",
     emailId: "",
     address: "",
-    phone: 0 || "",
+    phonenum: 0 || "",
     image: "",
   });
+
+  useEffect(() => {
+    if (getCookie("acc_info")) {
+      toast.info("Your Acc is Opened Already!");
+      window.location.href = "/";
+    }
+  }, []);
 
   return (
     <div>
@@ -52,6 +61,7 @@ const OpenAccount = () => {
             phone={formData.phone}
             setSteps={setSteps}
             setFormData={setFormData}
+            formData={formData}
           />
         )}
       </div>

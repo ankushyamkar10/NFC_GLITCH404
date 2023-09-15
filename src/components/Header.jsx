@@ -15,6 +15,7 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 import { getCookie } from "../utils/cookies";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const pages = ["Home", "Services", "FAQs"];
@@ -155,8 +156,15 @@ const Header = () => {
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>FAQs</MenuItem>
               <MenuItem
-                onClick={handleCloseNavMenu}
                 sx={{ color: "success.main" }}
+                onClick={(e) => {
+                  if (getCookie("acc_info")) {
+                    alert("Your Account has been created already!");
+                  } else {
+                    window.location.href = "/open-account";
+                  }
+                  handleCloseNavMenu(e);
+                }}
               >
                 Open an Account
               </MenuItem>

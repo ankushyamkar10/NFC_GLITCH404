@@ -12,10 +12,13 @@ import UpdatePassword from "./pages/UpdatePassword";
 import OpenAccount from "./components/OpenAccount/OpenAccount";
 import FinancialManagment from "./components/FinancialManagement/FinancialManagment";
 import GoalSetter from "./components/GoalSetter/GoalSetter";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
+      <Header />
       <Router>
         <div className="container">
           <Routes>
@@ -31,6 +34,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      <Footer />
       <ToastContainer />
     </>
   );

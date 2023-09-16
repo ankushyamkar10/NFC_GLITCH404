@@ -292,13 +292,14 @@ input[type="radio"]:checked + label,
   cursor: pointer;
   pointer-events: all;
 }
+
 .comments {
-  margin-top: 20px;
+  margin: 2rem;
 }
 
 .comments-title {
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .comments-container {
@@ -306,7 +307,7 @@ input[type="radio"]:checked + label,
 }
 
 .comment-form-title {
-  font-size: 22px;
+  font-size: 1rem;
 }
 
 .comment-form-textarea {
@@ -318,7 +319,7 @@ input[type="radio"]:checked + label,
 }
 
 .comment-form-button {
-  font-size: 16px;
+  font-size: 1rem;
   padding: 8px 16px;
   background: rgb(59, 130, 246);
   border-radius: 8px;
@@ -341,7 +342,7 @@ input[type="radio"]:checked + label,
 
 .comment {
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 1rem;
 }
 
 .comment-image-container {
@@ -350,8 +351,8 @@ input[type="radio"]:checked + label,
 
 .comment-image-container img {
   border-radius: 50px;
-  width: 50px;
-  height: 50px;
+  width: 2rem;
+  height: auto;
 }
 
 .comment-right-part {
@@ -360,16 +361,17 @@ input[type="radio"]:checked + label,
 
 .comment-content {
   display: flex;
+  align-items: center;
 }
 
 .comment-author {
   margin-right: 8px;
-  font-size: 20px;
+  font-size: 1rem;
   color: rgb(59, 130, 246);
 }
 
 .comment-text {
-  font-size: 18px;
+  font-size: 0.75rem;
 }
 
 .comment-actions {

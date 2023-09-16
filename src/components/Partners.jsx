@@ -29,14 +29,13 @@ const Partners=()=> {
         }
     };
     return(
-        <div className='flex flex-col  justify-center '>
-            {/* <div className='h-24 md:w-[80%] mx-auto'> */}
+        <div className='flex flex-col justify-center my-5'>
             <Carousel responsive={responsive} autoPlay={true} arrows={false} shouldResetAutoplay={true} rewind={true} rewindWithAnimation={true}>
-                <div><img src={footer1} alt="" className='w-24 h-24 mx-auto' /></div>
-                <div><img src={footer2} alt="" className='w-24 h-24 mx-auto' /></div>
-                <div><img src={footer3} alt="" className='w-24 h-24 mx-auto' /></div>
-                <div><img src={footer4} alt="" className='w-24 h-24 mx-auto' /></div>
-                <div><img src={footer5} alt="" className='w-24 h-24 mx-auto' /></div>
+                <div className="mx-5"><img src={footer1} alt="" className='w-[9rem] h-[9rem]' /></div>
+                <div className="mx-5"><img src={footer2} alt="" className='w-[9rem] h-[9rem]' /></div>
+                <div className="mx-5"><img src={footer3} alt="" className='w-[9rem] h-[9rem]' /></div>
+                <div className="mx-5"><img src={footer4} alt="" className='w-[9rem] h-[9rem]' /></div>
+                <div className="mx-5"><img src={footer5} alt="" className='w-[9rem] h-[9rem]' /></div>
             </Carousel>
         </div>
     );

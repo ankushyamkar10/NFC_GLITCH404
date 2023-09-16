@@ -18,7 +18,7 @@ import { getCookie } from "../utils/cookies";
 import { toast } from "react-toastify";
 
 const Header = () => {
-  const pages = ["Home", "Services", "FAQs"];
+  const pages = ["Home", "Services", "Library"];
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -136,7 +136,14 @@ const Header = () => {
 
                 {/* Add more services as needed */}
               </Menu>
-              <MenuItem>Home</MenuItem>
+              <MenuItem
+                onClick={(e) => {
+                  handleCloseNavMenu(e);
+                  window.location.href = "/";
+                }}
+              >
+                Home
+              </MenuItem>
 
               <MenuItem>
                 <Box
@@ -154,7 +161,14 @@ const Header = () => {
                   </Button>
                 </Box>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>FAQs</MenuItem>
+              <MenuItem
+                onClick={(e) => {
+                  handleCloseNavMenu(e);
+                  window.location.href = "/library";
+                }}
+              >
+                Library
+              </MenuItem>
               <MenuItem
                 sx={{ color: "success.main" }}
                 onClick={(e) => {
@@ -189,7 +203,10 @@ const Header = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { md: "flex" } }}>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={(e) => {
+                window.location.href = "/";
+                handleCloseNavMenu(e);
+              }}
               sx={{
                 my: 2,
                 color: "white",
@@ -213,14 +230,17 @@ const Header = () => {
             </Button>
 
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={(e) => {
+                window.location.href = "/library";
+                handleCloseNavMenu(e);
+              }}
               sx={{
                 my: 2,
                 color: "white",
                 display: { xs: "none", md: "flex" },
               }}
             >
-              FAQs
+              Library
             </Button>
 
             <Button

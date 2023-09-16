@@ -293,7 +293,14 @@ const FinancialManagment = () => {
             <div>Rate of Interest : 6.5%</div>
             <div>Duration : 1yr</div>
             <div> Interest Earned :{(6.5 * totalVal * 1) / 100}</div>
-            <button className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2">
+            <button
+              className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2"
+              onClick={() =>
+                window.open(
+                  "https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=ICI&CTA_FLAG=DEPOSIT&af_xp=social&source_caller=ui&pid=RIB&utm_source=website&shortlink=FDIndex&utm_medium=onelink&utm_campaign=fixeddeposit&deep_link_value=openfdNew&c=FD_RIBF"
+                )
+              }
+            >
               Get Started
             </button>
           </FinancialCardWrapper>
@@ -301,7 +308,14 @@ const FinancialManagment = () => {
             <div>Rate of Interest : 6.5%</div>
             <div>Duration : 1yr</div>
             <div>Interest Earned : {(6.5 * totalVal * 1) / 100}</div>
-            <button className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2">
+            <button
+              className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2"
+              onClick={() =>
+                window.open(
+                  "https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=ICI&CTA_FLAG=DEPOSIT&af_xp=social&source_caller=ui&pid=RIB&utm_source=website&shortlink=FDIndex&utm_medium=onelink&utm_campaign=fixeddeposit&deep_link_value=openfdNew&c=FD_RIBF"
+                )
+              }
+            >
               Get Started
             </button>
           </FinancialCardWrapper>
@@ -309,7 +323,14 @@ const FinancialManagment = () => {
             <div>Rate of Interest : 6.5%</div>
             <div>Duration : 1yr</div>
             <div> Interest Earned :{(6.5 * totalVal * 1) / 100}</div>
-            <button className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2">
+            <button
+              className="px-4 py-2 text-xs bg-blue-400 rounded-lg mx-auto mt-2"
+              onClick={() =>
+                window.open(
+                  "https://infinity.icicibank.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=ICI&CTA_FLAG=DEPOSIT&af_xp=social&source_caller=ui&pid=RIB&utm_source=website&shortlink=FDIndex&utm_medium=onelink&utm_campaign=fixeddeposit&deep_link_value=openfdNew&c=FD_RIBF"
+                )
+              }
+            >
               Get Started
             </button>
           </FinancialCardWrapper>

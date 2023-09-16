@@ -55,7 +55,7 @@ function Login() {
     return <div>isLoading</div>;
   }
   return (
-    <>
+    <section className="text-center mt-8">
       <section className="heading">
         <h1>Login</h1>
       </section>
@@ -104,7 +104,7 @@ function Login() {
             />
           </div>
           <div className="from-group">
-            <button type="submit" className="btn btn-block">
+            <button type="submit" className="btn btn-block bg-blue-400">
               Submit
             </button>
           </div>
@@ -113,7 +113,7 @@ function Login() {
           <div className="forgot-password">Forgot password ?</div>
         </Link>
       </section>
-    </>
+    </section>
   );
 }
 

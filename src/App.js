@@ -14,6 +14,7 @@ import FinancialManagment from "./components/FinancialManagement/FinancialManagm
 import GoalSetter from "./components/GoalSetter/GoalSetter";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Layout from "./components/layout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/open-account" element={<OpenAccount />} />
           <Route path="/management" element={<FinancialManagment />} />
+          <Route path="/library" element={<Layout />} />
           <Route path="/goalsetter" element={<GoalSetter />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

@@ -51,7 +51,7 @@ const Testimonials = () => {
         <div className="flex items-center justify-center flex-col gap-2">
           <div className="text-lg font-bold">{test.Username}</div>
           <div className="">{test.Body}</div>
-          <div>{test.Rate}</div>
+          <div>Rating : {test.Rate}</div>
         </div>
       </div>
     );
@@ -59,7 +59,7 @@ const Testimonials = () => {
 
   return (
     <div className="m-4 flex flex-col">
-      <div className="text-3xl my-6 font-semibold">GoalSetter</div>
+      <div className="text-3xl mx-auto my-6 font-semibold">Testimonials</div>
       <Carousel
         responsive={responsive}
         autoPlay={true}

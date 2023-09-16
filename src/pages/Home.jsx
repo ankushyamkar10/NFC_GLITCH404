@@ -1,6 +1,7 @@
 import Button from "@mui/material/Button";
 import React from "react";
 import Replys from "../components/Reply/replys";
+import Testimonials from "../components/Testimonials";
 
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -9,7 +10,7 @@ const Home = () => {
     <div className="vidintro">
       <div className="container m-0">
         <iframe
-          className="w-[100vw] h-[18rem]"
+          className="w-[100vw] h-[18rem] mx-auto"
           src="https://www.youtube.com/embed/DsKiW4ykDW0?si=vqUhSqFns9r9_d0C"
           title="YouTube video player"
           frameborder="0"
@@ -26,6 +27,7 @@ const Home = () => {
         </Button>
       </div>
       <Replys currentUserId={1} />
+      <Testimonials />
     </div>
   );
 };

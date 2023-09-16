@@ -20,19 +20,17 @@ function App() {
     <>
       <Header />
       <Router>
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/open-account" element={<OpenAccount />} />
-            <Route path="/management" element={<FinancialManagment />} />
-            <Route path="/goalsetter" element={<GoalSetter />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/updatePassword" element={<UpdatePassword />} />
-            <Route path="/auth" element={<InterMediatoryAuth />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/open-account" element={<OpenAccount />} />
+          <Route path="/management" element={<FinancialManagment />} />
+          <Route path="/goalsetter" element={<GoalSetter />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/updatePassword" element={<UpdatePassword />} />
+          <Route path="/auth" element={<InterMediatoryAuth />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
       </Router>
       <Footer />
       <ToastContainer />

@@ -58,7 +58,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   }, []);
 
   return (
-    <div className="comments">
+    <div className="comments mx-4">
       <h3 className="comments-title">Ask Questions ?</h3>
       {/* <div className="comment-form-title">Write comment</div> */}
       <CommentForm submitLabel="Write" handleSubmit={addComment} />
